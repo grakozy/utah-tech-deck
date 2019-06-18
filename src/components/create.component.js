@@ -47,7 +47,7 @@ export default class Create extends Component {
 	onSubmit(e) {
 		e.preventDefault();
 		axios
-			.post('http://localhost:4000/companies', {
+			.post('https://cryptic-thicket-76143.herokuapp.com/companies', {
 				name: this.state.companyName,
 				about: this.state.companyAbout,
 				address: this.state.companyAddress,
