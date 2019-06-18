@@ -39,11 +39,25 @@ export default class Index extends Component {
 				<ul>
 					{companies.map((company) => (
 						<li key={company.id}>
-							<p>{company.name}</p>
+							<h1>{company.name}</h1>
 							<p>{company.about}</p>
-							<p>{company.address}</p>
-							<p>{company.website}</p>
-							<p>{company.phone}</p>
+							<p>
+								<a
+									target="_blank"
+									rel="noopener noreferrer"
+									href={`http://maps.google.com/?q=${company.address}`}
+								>
+									{company.address}
+								</a>
+							</p>
+							<p>
+								<a target="_blank" rel="noopener noreferrer" href={company.website}>
+									{company.website}
+								</a>
+							</p>
+							<p>
+								<a href={`tel:${company.phone}`}>{company.phone}</a>
+							</p>
 						</li>
 					))}
 				</ul>
